@@ -12,15 +12,30 @@
 </head>
 
 <body>
-    <div class="register_page">
-        <div class="form">
-            <form action="{{url_for('predict')}}" method="POST">
-                Script: <input type="text" name='script' placeholder="Enter the script"><br>
-                <input type="submit" value="predict" class="submit">
-            </form>
-            <p> House Price is: {{data[0]}}</p>
-        </div>
+    <div class="outer_box">
+        <div class="register_page">
+            <header class="signup_header">
+                <h1>Movie classifier</h1>
 
+            </header>
+            <div class="form">
+                <form action="{{url_for('predict')}}" method="POST">
+                    <p>
+                        <label for="script">Script:</label>
+                         <input type="text" name='script' placeholder="Enter the script">
+                    </p>
+                    <p>
+                        <input type="submit" value="Predict" class="submit" >
+                    </p>
+                </form>
+                <p> House Price is: {{data[0]}}</p>
+            </div>
+        </div>
+        
+        <div class="circle"></div>
+        <div class="circle1"></div>
+        <div class="circle"></div>
+        <div class="circle1"></div>
     </div>
 
 
