@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Rating classifier</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+     <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <div class="register_page">
+        <div class="form">
+            <form action="{{url_for('predict')}}" method="POST">
+                Script: <input type="text" name='script' placeholder="Enter the script"><br>
+                <input type="submit" value="predict" class="submit">
+            </form>
+            <p> The movie is {{data[0]}}</p>
+        </div>
+
+    </div>
+
+
+</body>        
+
+</html>
